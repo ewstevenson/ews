@@ -2,7 +2,7 @@
   "name" : "Coast to Coast AM Downloader for Insiders",
   "version" : "0.1",
   "description" : "Easily Download all the Coast to Coast episodes with this extension. Requires Coast to Coast AM insider subscription.",
-  "permissions": [  "background", "tabs", "webRequest", "webRequestBlocking", "*://*/*"],
+  "permissions": [  "background", "downloads", "tabs", "webRequest", "webNavigation", "webRequestBlocking", "*://*/*"],
   "manifest_version": 2,
   "background": {
     "scripts": ["js/c2c-bg.js"],

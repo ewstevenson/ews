@@ -1,5 +1,9 @@
 
 // functions
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 
 var HttpClient = function() {
     this.get = function(aUrl, aCallback) {
@@ -14,17 +18,35 @@ var HttpClient = function() {
     }
 }
 
-//
-var filter = {urls: ["<all_urls>"]};
-//var arr = [], l = document.getElementsByClassName("audiobox4");
-var streamLinks = document.getElementsByClassName("streamlink-dynamic");
-console.log(streamLinks);
 
 
-for(var i=0; i<streamLinks.length; i++) {
-    console.log(streamLinks[i].attributes[0].ownerElement.href);
-    //console.log(streamLinks.item(i).className );
+// sleep until all DOM elements are populated.. else youll get # instead of URLs
+sleep(500).then(() => {
+
+  var filter = {urls: ["<all_urls>"]};
+  //var arr = [], l = document.getElementsByClassName("audiobox4");
+  var streamLinks = document.getElementsByClassName("streamlink-dynamic");
+  //console.log(streamLinks);
+  for(var i=0; i<streamLinks.length; i++) {
+    if (streamLinks.item(i).className == 'streamlink-dynamic') {
+      //console.log(streamLinks[i].attributes[0]);
+      //console.log(streamLinks[i].parentNode.firstElementChild.href);
+      //console.log(streamLinks[i].attributes[0].ownerElement.href);
+      //console.log(streamLinks[i].attributes[0].value);
+      //console.log(streamLinks[i].attributes[0].textContent);
+      console.log("Downloading: "+streamLinks[i].href);
+
+      chrome.downloads.download({url: streamLinks[i].href}, function(id) {
+        console.log("Downloading: "+streamLinks[i].href);
+
+      });
+
+      //console.log(streamLinks[i].attributes[0].nodeValue);
+      //console.log(streamLinks.item(i).className );
+  }
+
 }
+})
 
 /*
 var v = document.getElementsByClassName("streamlink-dynamic");
