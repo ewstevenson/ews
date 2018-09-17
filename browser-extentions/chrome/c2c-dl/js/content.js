@@ -34,12 +34,14 @@ sleep(500).then(() => {
       //console.log(streamLinks[i].attributes[0].ownerElement.href);
       //console.log(streamLinks[i].attributes[0].value);
       //console.log(streamLinks[i].attributes[0].textContent);
-      console.log("Downloading: "+streamLinks[i].href);
+        chrome.runtime.sendMessage(streamLinks[i].href);
 
-      chrome.downloads.download({url: streamLinks[i].href}, function(id) {
-        console.log("Downloading: "+streamLinks[i].href);
 
-      });
+    //  chrome.downloads.download({
+      //    url: streamLinks[i].href,
+        //  saveAs: false
+
+    //  });
 
       //console.log(streamLinks[i].attributes[0].nodeValue);
       //console.log(streamLinks.item(i).className );
