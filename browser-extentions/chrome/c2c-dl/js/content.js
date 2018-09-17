@@ -22,8 +22,8 @@ console.log(streamLinks);
 
 
 for(var i=0; i<streamLinks.length; i++) {
-    console.log(streamLinks[i].attributes[0]);
-  //  console.log(streamLinks.item(i).className );
+    console.log(streamLinks[i].attributes[0].ownerElement.href);
+    //console.log(streamLinks.item(i).className );
 }
 
 /*
