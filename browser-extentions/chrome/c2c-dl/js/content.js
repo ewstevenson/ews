@@ -1,4 +1,10 @@
+
+//var filter = {urls: <all_urls>};
+chrome.runtime.sendMessage("https://www.coasttocoastam.com/show/2018/09/01");
+
+
 // there is no sleep, so make some
+/*
 
 function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
@@ -19,8 +25,10 @@ var year;
 var datePath;
 var showURL;
 
+*/
 
 
+/*
 for (var y = 0; y < years.length; y++) {
   year = years[y];
   for (var m = 0; m < months.length; m++) {
@@ -32,16 +40,18 @@ for (var y = 0; y < years.length; y++) {
       // do this for everyday in loop
       //console.log(showURL);
 
-
+*/
 
       // sleep until all DOM elements are populated.. else youll get # instead of URLs
+/*
+
       sleep(500).then(() => {
         var filter = {urls: ["https://www.coasttocoastam.com/*"]};
         // useful links are of the streamlink-dynamic class
         var streamLinks = document.getElementsByClassName("streamlink-dynamic");
         for(var i=0; i<streamLinks.length; i++) {
           if (streamLinks.item(i).className == 'streamlink-dynamic') {
-            //console.log(streamLinks[i].attributes[0]);
+            console.log(streamLinks[i].attributes[0]);
             //console.log(streamLinks[i].parentNode.firstElementChild.href);
             //console.log(streamLinks[i].attributes[0].ownerElement.href);
             //console.log(streamLinks[i].attributes[0].value);
@@ -55,10 +65,16 @@ for (var y = 0; y < years.length; y++) {
           }
         }
       })
+*/
 
+
+
+
+/*
                   } // end of do this everyday loop
 
 
                 }
 
               }
+              */
