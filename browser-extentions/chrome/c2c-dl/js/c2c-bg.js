@@ -1,8 +1,10 @@
 
 chrome.runtime.onMessage.addListener(function(url, sender, sendResponse) {
-//alert(url);
+console.log(url);
+/*
 		chrome.downloads.download({
 			url: url,
 			saveAs: false
 		});
+		*/
 });
