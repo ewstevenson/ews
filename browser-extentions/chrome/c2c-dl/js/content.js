@@ -6,7 +6,9 @@ function sleep (time) {
 
 // base url and date arrays for show path.
 var baseURL = 'https://www.coasttocoastam.com/show/';
-var years = ['2013', '2014', '2015', '2016', '2017', '2018'];
+//var years = ['2013', '2014', '2015', '2016', '2017', '2018'];
+var years = ['2013', '2016', '2017', '2018'];
+
 var months = [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
                '11', '12'];
 var days = [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
