@@ -6,8 +6,8 @@ function sleep (time) {
 
 // base url and date arrays for show path.
 var baseURL = 'https://www.coasttocoastam.com/show/';
-//var years = ['2013', '2014', '2015', '2016', '2017', '2018'];
-var years = ['2013', '2016', '2017', '2018'];
+var years = ['2013', '2014', '2015', '2016', '2017', '2018'];
+// var years = ['2013', '2016', '2017', '2018'];
 
 var months = [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
                '11', '12'];
@@ -38,8 +38,8 @@ for (var y = 0; y < years.length; y++) {
   }
 }
 
-console.log("Current Location: "+window.location.href);
-console.log("Next Location: "+all_dates[all_dates.indexOf(window.location.href)+1]);
+//console.log("Current Location: "+window.location.href);
+//console.log("Next Location: "+all_dates[all_dates.indexOf(window.location.href)+1]);
 
 // sleep until all DOM elements are populated.. else youll get # instead of URLs
 sleep(500).then(() => {
