@@ -26,7 +26,7 @@ if print_sequences: print sequence_length
 
 #dictionaries
 
-print_dicts = 1
+print_dicts = 0
 
 blank_dict = { }
 car_dict = { "MAKE":"Porsche", "MODEL":"911 Turbo", "YEAR":2013, "COLOR":"Dark Grey Metallic" }
@@ -38,3 +38,7 @@ if print_dicts: print blank_dict
 if print_dicts: print car_dict
 if print_dicts: print car_model
 if print_dicts: print mixed_dict
+
+
+
+
