@@ -1,0 +1,20 @@
+[
+    {
+        "metric": "sys.cpu.nice",
+        "timestamp": 1544826073,
+        "value": 18,
+        "tags": {
+           "host": "web01",
+           "dc": "lga"
+        }
+    },
+    {
+        "metric": "sys.cpu.nice",
+        "timestamp": 1544826973,
+        "value": 9,
+        "tags": {
+           "host": "web02",
+           "dc": "lga"
+        }
+    }
+]
