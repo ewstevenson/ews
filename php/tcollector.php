@@ -19,7 +19,7 @@ function tcollect($payload) {
 	$port = 8025;
 	$post_url = 'http://ericstevenson.com:8025/api/put?details';
 	$json_encode_payload = $payload; //json_encode($payload);
-	
+	print $json_encode_payload;	
 	$ch = curl_init($post_url);
 	curl_setopt($ch, CURLOPT_HEADER, false);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
