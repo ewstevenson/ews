@@ -28,10 +28,10 @@ with open('../data/ap-log.csv', 'rb') as csv_file:
 #print header_row
 #print log_body
 
-epoch_i = epoch_time
+epoch_i =  1387813901785 #epoch_time starts at 01/01/1970 
 for log_item in log_body:
 	n = 0
-	epoch_i += 100000
+	epoch_i += 60000 #add a  minute to the timestamp
 	for i in log_item:
 		h = re.sub(r'[^\w\s"]','',str(header_row[n]).replace(" ","_"))
 		metric_name = "customer_id.log.ap_logs.log_id."+re.sub(r'[^\w\s"]','',h) 

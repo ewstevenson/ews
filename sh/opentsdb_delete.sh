@@ -4,8 +4,8 @@ set -o errexit
 set -o pipefail
 
 TSDB_CMD="../../../wwwOnNas/opentsdb/opentsdb/build/tsdb"
-START_TIME="1y-ago"
-END_TIME="21d-ago"
+START_TIME="1970/01/01-00:00:00"
+END_TIME="2031/01/01-00:00:00"
 SLEEP=10
 
 METRICS=$( $TSDB_CMD uid grep . | grep -a ^metrics | awk '{print $2}' | sed 's/\:$//g' )
