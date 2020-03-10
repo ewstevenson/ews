@@ -53,13 +53,22 @@ for (var y = 0; y < datesNeeded.length; y++) {
 
 
 
+function isLoggedIn() {
+  var loggedIn = document.getElementsByClassName("header_icon user logged_in");
+  if (loggedIn) {
+      chrome.browserAction.setPopup({popup: "logged_in.html"});
+    } else {
+    window.alert("Please log in to continue. ");
+  }
+
+}
 
 
 
+isLoggedIn();
 
 
-
-
+function downloadShows() {
 //console.log("Current Location: "+window.location.href);
 //console.log("Next Location: "+all_dates[all_dates.indexOf(window.location.href)+1]);
 
@@ -83,3 +92,4 @@ sleep(500).then(() => {
 })
 
   window.location.href = all_dates[all_dates.indexOf(window.location.href)+1];
+}
