@@ -51,22 +51,19 @@ for (var y = 0; y < datesNeeded.length; y++) {
 }
 
 
+window.open("popup.html", "_blank");
 
 
-function isLoggedIn() {
-  var loggedIn = document.getElementsByClassName("header_icon user logged_in");
-  if (loggedIn) {
-      chrome.browserAction.setPopup({popup: "logged_in.html"});
+  var headerIcon = document.getElementById('header_icon_user').className;
+  console.log(headerIcon);
+
+  if (headerIcon == 'header_icon user logged_in') {
+    console.log("You are logged in");
+
+    // downloadShows();
     } else {
-    window.alert("Please log in to continue. ");
+    console.log("Please log in to continue. ");
   }
-
-}
-
-
-
-isLoggedIn();
-
 
 function downloadShows() {
 //console.log("Current Location: "+window.location.href);
