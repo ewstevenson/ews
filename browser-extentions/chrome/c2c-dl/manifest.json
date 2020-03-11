@@ -14,7 +14,8 @@
   },
   "content_scripts": [
     {
-      "matches": [ "*://*.coasttocoastam.com/*" ],
+      "matches": [ "*://*.coasttocoastam.com/*",
+                    "*://erics.es/ext/c2c.php" ],
       "js": ["js/jquery.js", "js/content.js"]
     }
   ]

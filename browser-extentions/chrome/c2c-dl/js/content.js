@@ -51,7 +51,6 @@ for (var y = 0; y < datesNeeded.length; y++) {
 }
 
 
-window.open("popup.html", "_blank");
 
 
   var headerIcon = document.getElementById('header_icon_user').className;
@@ -59,7 +58,7 @@ window.open("popup.html", "_blank");
 
   if (headerIcon == 'header_icon user logged_in') {
     console.log("You are logged in");
-
+    window.open("https://ericstevenson.com/ext/c2c.html", "_blank");
     // downloadShows();
     } else {
     console.log("Please log in to continue. ");
