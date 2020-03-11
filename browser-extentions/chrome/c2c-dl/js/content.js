@@ -51,6 +51,15 @@ for (var y = 0; y < datesNeeded.length; y++) {
 }
 
 
+var e = document.getElementsByTagName('dl_date');
+console.log(e);
+
+for(var j = 0; j < e.length; j++ ) {
+  console.log(e[j].innerText);
+
+}
+
+
 
 
   var headerIcon = document.getElementById('header_icon_user').className;
