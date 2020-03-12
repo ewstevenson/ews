@@ -68,7 +68,6 @@ for(var j = 0; j < e.length; j++ ) {
 downloadShows(e);
 
 
-
   var headerIcon = document.getElementById('header_icon_user').className;
   console.log(headerIcon);
 
