@@ -42,6 +42,10 @@ for (var y = 0; y < years.length; y++) {
 
 END BIG COMMENT */
 
+
+
+// un comment this to hardrun
+/*
 var datesNeeded = [ '2014/02/14','2014/02/19','2014/02/20','2014/02/25','2014/02/26','2014/03/01','2014/03/02','2014/03/03','2014/03/04','2014/03/06','2014/03/08','2014/03/13','2014/03/14','2014/05/05','2014/05/20','2014/09/20','2014/09/31','2015/02/30','2015/02/31','2015/09/31','2015/11/31','2016/03/08','2016/03/31','2016/06/31','2016/11/31','2017/02/01','2017/02/30','2017/02/31','2017/09/05','2017/10/16','2018/02/29','2018/02/30','2018/08/06','2018/08/20','2018/09/20','2018/09/21','2018/09/24','2018/09/29','2018/09/31','2018/10/01','2018/10/02','2018/10/07','2018/10/13','2018/10/17','2018/10/18','2018/10/25','2018/10/28','2018/11/06','2018/11/14','2018/11/15','2018/11/17','2018/11/19','2018/11/20','2018/11/23','2018/11/24','2018/11/26','2018/11/27','2018/11/28','2018/11/30' ];
 var all_dates = [];
 
@@ -49,6 +53,8 @@ for (var y = 0; y < datesNeeded.length; y++) {
   showURL = baseURL+datesNeeded[y];
   all_dates.push(showURL);
 }
+
+*/
 
 
 var e = document.getElementsByTagName('dl_date');
@@ -59,6 +65,7 @@ for(var j = 0; j < e.length; j++ ) {
 
 }
 
+downloadShows(e);
 
 
 
@@ -73,9 +80,20 @@ for(var j = 0; j < e.length; j++ ) {
     console.log("Please log in to continue. ");
   }
 
-function downloadShows() {
+function downloadShows(datesNeeded) {
 //console.log("Current Location: "+window.location.href);
 //console.log("Next Location: "+all_dates[all_dates.indexOf(window.location.href)+1]);
+
+// hacks start there
+var baseURL = 'https://www.coasttocoastam.com/show/';
+var all_dates = [];
+
+for (var y = 0; y < datesNeeded.length; y++) {
+  showURL = baseURL+datesNeeded[y].innerText;
+  all_dates.push(showURL);
+}
+// hacks end here
+
 
 // sleep until all DOM elements are populated.. else youll get # instead of URLs
 sleep(500).then(() => {
@@ -95,6 +113,6 @@ sleep(500).then(() => {
     }
   }
 })
-
   window.location.href = all_dates[all_dates.indexOf(window.location.href)+1];
+//  window.location.href = all_dates[all_dates.indexOf(window.location.href)+1];
 }
